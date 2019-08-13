@@ -1,0 +1,57 @@
+{
+    "tasks": [
+        {
+            "label": "clean",
+            "command": "dotnet clean",
+            "type": "shell",
+            "problemMatcher": "$msCompile",
+            "options": {
+                "cwd": "${workspaceFolder}/PartlyNews.Functions"
+            }
+        },
+        {
+            "label": "build",
+            "command": "dotnet build",
+            "type": "shell",
+            "dependsOn": "clean",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$msCompile",
+            "options": {
+                "cwd": "${workspaceFolder}/PartlyNews.Functions"
+            }
+        },
+        {
+            "label": "clean release",
+            "command": "dotnet clean --configuration Release",
+            "type": "shell",
+            "problemMatcher": "$msCompile",
+            "options": {
+                "cwd": "${workspaceFolder}/PartlyNews.Functions"
+            }
+        },
+        {
+            "label": "publish",
+            "command": "dotnet publish --configuration Release",
+            "type": "shell",
+            "dependsOn": "clean release",
+            "problemMatcher": "$msCompile",
+            "options": {
+                "cwd": "${workspaceFolder}/PartlyNews.Functions"
+            }
+        },
+        {
+            "type": "func",
+            "dependsOn": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/PartlyNews.Functions/bin/Debug/netcoreapp2.1"
+            },
+            "command": "host start",
+            "isBackground": true,
+            "problemMatcher": "$func-watch"
+        }
+    ],
+    "version": "2.0.0"
+}
