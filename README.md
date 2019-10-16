@@ -4,6 +4,8 @@ I'm happy to announce today a new series that I started on the [Xamarin YouTube 
 
 In each _season_ of Partly Cloudy, you'll learn how to build an app from scratch and take it all the way through deploying it to the App Stores. And with a name like Partly Cloudy - we'll explore topics like [Azure](https://azure.microsoft.com/free?WT.mc_id=partlycloudy-github-masoucou) and [DevOps](https://azure.microsoft.com/services/devops?WT.mc_id=partlycloudy-github-masoucou) along with [Xamarin development](https://docs.microsoft.com/xamarin/?WT.mc_id=partlycloudy-github-masoucou) ... you know ... Partly Cloudy!
 
+![Partly Cloudy Logo](https://res.cloudinary.com/code-mill-technologies-inc/image/upload/bo_1px_solid_rgb:000000,c_scale,h_600,r_20/v1571192518/PC-Header_busw9j.jpg)
+
 In the first season, we'll build up a clone of the Microsoft News app!
 
 ## The Shows
