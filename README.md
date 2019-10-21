@@ -26,7 +26,7 @@ And as always, if you have any questions, or would like any topic from a particu
 
 ## Episode 1: Hello News
 
-[Episode 1](https://channel9.msdn.com/partly-cloudy/Hello-News-Intro-project-structure-and-HTTP-requests?WT.mc_id=partlycloudy-github-masoucou) is all about getting things up and running. File->New for a Xamarin app.
+[Episode 1](https://channel9.msdn.com/Shows/Partly-Cloudy/Hello-News-Intro-project-structure-and-HTTP-requests?term=partly%20cloudy&WT.mc_id=partlycloudy-github-masoucou) is all about getting things up and running. File->New for a Xamarin app.
 
 We move fast though! Before the episode is over, our soon-to-be Microsoft News clone is invoking an Azure Function that's running locally!
 
