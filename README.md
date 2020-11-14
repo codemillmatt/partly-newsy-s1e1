@@ -2,7 +2,7 @@
 
 I'm happy to announce today a new series that I started on the [Xamarin YouTube Channel](https://www.youtube.com/user/XamarinVideos) called [Partly Cloudy](https://www.youtube.com/watch?v=PAVb73wD4TY&list=PLM75ZaNQS_FYeMHheKdscYMxRVqVtPeto)!
 
-In each _season_ of Partly Cloudy, you'll learn how to build an app from scratch and take it all the way through deploying it to the App Stores. And with a name like Partly Cloudy - we'll explore topics like [Azure](https://azure.microsoft.com/free?WT.mc_id=partlycloudy-github-masoucou) and [DevOps](https://azure.microsoft.com/services/devops?WT.mc_id=partlycloudy-github-masoucou) along with [Xamarin development](https://docs.microsoft.com/xamarin/?WT.mc_id=partlycloudy-github-masoucou) ... you know ... Partly Cloudy!
+In each _season_ of Partly Cloudy, you'll learn how to build an app from scratch and take it all the way through deploying it to the App Stores. And with a name like Partly Cloudy - we'll explore topics like [Azure](https://azure.microsoft.com/free?WT.mc_id=mobile-0000-masoucou) and [DevOps](https://azure.microsoft.com/services/devops?WT.mc_id=mobile-0000-masoucou) along with [Xamarin development](https://docs.microsoft.com/xamarin/?WT.mc_id=mobile-0000-masoucou) ... you know ... Partly Cloudy!
 
 ![Partly Cloudy Logo](https://res.cloudinary.com/code-mill-technologies-inc/image/upload/bo_1px_solid_rgb:000000,c_scale,h_600,r_20/v1571192518/PC-Header_busw9j.jpg)
 
@@ -12,7 +12,7 @@ In the first season, we'll build up a clone of the Microsoft News app!
 
 Each week we'll cover a different aspect of mobile cloud development that's needed to build up our application.
 
-One week we'll be building an [Azure Function backend](https://docs.microsoft.com/azure/azure-functions/?WT.mc_id=partlycloudy-github-masoucou). The next we'll be diving in on [Xamarin.Forms Shell](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/?WT.mc_id=partlycloudy-github-masoucou). Then we'll be off and running with [App Center Auth](https://docs.microsoft.com/appcenter/auth/?WT.mc_id=partlycloudy-github-masoucou) or even doing some DevOps.
+One week we'll be building an [Azure Function backend](https://docs.microsoft.com/azure/azure-functions/?WT.mc_id=mobile-0000-masoucou). The next we'll be diving in on [Xamarin.Forms Shell](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/?WT.mc_id=mobile-0000-masoucou). Then we'll be off and running with [App Center Auth](https://docs.microsoft.com/appcenter/auth/?WT.mc_id=mobile-0000-masoucou) or even doing some DevOps.
 
 My aim is to keep each episode of Partly Cloudy to 15 minutes or less. 
 
@@ -26,11 +26,11 @@ And as always, if you have any questions, or would like any topic from a particu
 
 ## Episode 1: Hello News
 
-[Episode 1](https://channel9.msdn.com/Shows/Partly-Cloudy/Hello-News-Intro-project-structure-and-HTTP-requests?term=partly%20cloudy&WT.mc_id=partlycloudy-github-masoucou) is all about getting things up and running. File->New for a Xamarin app.
+[Episode 1](https://channel9.msdn.com/Shows/Partly-Cloudy/Hello-News-Intro-project-structure-and-HTTP-requests?term=partly cloudy&WT.mc_id=mobile-0000-masoucou) is all about getting things up and running. File->New for a Xamarin app.
 
 We move fast though! Before the episode is over, our soon-to-be Microsoft News clone is invoking an Azure Function that's running locally!
 
-And that's where I want to expand a bit more. So grab yourself some [Free Azure](https://azure.microsoft.com/free?WT.mc_id=partlycloudy-github-masoucou) and settle in for some fun!
+And that's where I want to expand a bit more. So grab yourself some [Free Azure](https://azure.microsoft.com/free?WT.mc_id=mobile-0000-masoucou) and settle in for some fun!
 
 First thing I want to talk about is installing the Azure Functions Core Tools locally.
 
@@ -38,7 +38,7 @@ And then how to modify your iOS and Android applications to invoke the Function 
 
 ### Azure Functions Core Tools
 
-First off - the official documentation on installing the [Functions Core Tools lives here](https://docs.microsoft.com/azure/azure-functions/functions-run-local?WT.mc_id=partlycloudy-github-masoucou).
+First off - the official documentation on installing the [Functions Core Tools lives here](https://docs.microsoft.com/azure/azure-functions/functions-run-local?WT.mc_id=mobile-0000-masoucou).
 
 Fwiw ... You want to run the **2.x** version of the tools.
 
@@ -91,7 +91,7 @@ Android suffers from the same fate that iOS does. No loading of non-secure conte
 
 But Android is a little more difficult than iOS. Android 9 (API 28) and later requires SSL. And it just so happens that's what we're targeting with this project!
 
-My good friend James Montemagno [wrote a great post](https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/?WT.mc_id=partlycloudy-github-masoucou) on how to allow local network traffic on an Android emulator.
+My good friend James Montemagno [wrote a great post](https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/?WT.mc_id=mobile-0000-masoucou) on how to allow local network traffic on an Android emulator.
 
 Read the post for the full details - but essentially you have to add a special XML file and then specify in there to allow traffic on IP address `10.0.2.2` to go through in clear text.
 
@@ -101,7 +101,7 @@ BUT THAT'S NOT ALL!
 
 We also have to change the URL of the function from `http://localhost:7071` to `http://10.0.2.2:7071` ... cuz that's what the Android emulator is using for it's local loopback.
 
-To do that - use some [Xamarin.Essentials goodness](https://docs.microsoft.com/xamarin/essentials/device-information?WT.mc_id=partlycloudy-github-masoucou)!
+To do that - use some [Xamarin.Essentials goodness](https://docs.microsoft.com/xamarin/essentials/device-information?WT.mc_id=mobile-0000-masoucou)!
 
 ```language-csharp
 if (DeviceInfo.DeviceType == DeviceType.Virtual && DeviceInfo.Platform == DevicePlatform.Android)
